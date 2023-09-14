@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply bg-black text-white
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-custom-background {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                      url('https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/c8479b71-fe11-449a-8442-f95431432e08/LK-en-20230821-popsignuptwoweeks-perspective_alpha_website_small.jpg');
 }
+.sign-container-gradient{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.banner-btn {
+    @apply flex items-center gap-x-2 rounded px-5 py-1.5 text-sm font-semibold transition hover:opacity-75 md:py-2.5 md:px-8 md:text-xl font-sans
+}
+
+.tab{
+    @apply  border-none outline-0 text-[#8c8c8c] hover:text-white transition duration-300 ease-in-out text-[16px] cursor-pointer py-[9px] px-[10px]
+}
+
+.active-tab{
+    @apply text-[#fff]
+}
+
+.active-tab-container{
+    @apply block
+}
+
+.you-tube-video {
+    width: 400px;
+    height: 300px;
+  }
+  
